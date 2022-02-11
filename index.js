@@ -244,14 +244,19 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
+
 function get20s(arr) {
-  for (let i = 0 ; i < arr.length ; i ++) {
-    arr[i].years.split('');
-    if (arr[i].years[0] >= 1900 && arr[i].years[2] <= 2000) {
-      return arr[i].name
+  let getAge =[];
+  for (let i = 0 ; i <= arr.length-1 ; i++) {
+    let splitArr = arr[i].years.split('-');
+    splitArr.join();
+    if (splitArr[0] > 1900 && splitArr[1] <2000) {
+      getAge.push(arr[i].name);
     }
   }
+  return getAge
 }
+
 
 
 
@@ -308,14 +313,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-const arrNew =[]
+let arrNew =[]
 function lotsOfArt(arr) {
   for (let i = 0 ; i <= arr.length-1 ; i++){
     if (arr[i].paintings > 100) {
-      arrNew.push(arr[i].name)
-      return arrNew
+      arrNew.push(arr[i].name) 
     }
   }
+  return arrNew
 }
  console.log(arrNew)
 
@@ -328,12 +333,15 @@ Use artistInfo to do the following:
 For example artistInfo(artists, 'Frida Kahlo') will return: 
   ["Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."]
 */
+
 function artistInfo(arr, name){
+  let bioNew = [];
   for (let i = 0 ; i <= arr.length-1 ; i++) {
     if (arr[i].name === name) {
-      return arr[i].bio
+      bioNew.push(arr[i].bio)
     }
   }
+  return bioNew
 }
 
 
@@ -347,8 +355,15 @@ Use artistByCountry to do the following:
 For example artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+
+function artistByCountry(arr, nat){
+  let arrNat = [];
+  for (let i = 0 ; i <= arr.length-1 ; i++) {
+    if (arr[i].nationality === nat) {
+      arrNat.push(arr[i].name);
+    }
+  }
+  return arrNat
 }
 
 
