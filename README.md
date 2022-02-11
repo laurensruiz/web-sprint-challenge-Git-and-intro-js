@@ -55,14 +55,5 @@ Navigate to `index.js` and complete the MVP challenges. Note that you need to sc
 
 🦄 [Sprint Challenge Study Guide](https://www.notion.so/bloomtech/Unit-1-Sprint-2-Study-Guide-16f656025c8744458addb068e6348101)
 
-Task 2b
 
-1. A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
-
-2. 
-   a. the entire code is the closure, this is because a closure is a function that uses an inner function that can access global variables(it this case it doesn't) however, the next line of code after the function calls the function or references it (the lexical environment) 
-
-   b. For dansRoll, the name "Dan" will stay constant but the numbers will change since we created a function to generate a random number.
-
-   c. The lexical scope of newRoll stays within the function since we aren't referencing anything outside the function for the newRoll function to work or run.
 
